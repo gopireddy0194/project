@@ -1,6 +1,7 @@
 pipeline {
 	environment {
     registry = "first image"
+	}
     agent any
     stages {
        	  stage('build') {
@@ -18,4 +19,4 @@ pipeline {
     }
   }
 }
-}
+
