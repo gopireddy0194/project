@@ -10,14 +10,14 @@ pipeline {
             }
 	     stage('Unit Test') {
             steps {
-                echo 'Testing..'
-		sh 'mvn test'
+                echo 'Testing skipped'
+		//sh 'mvn test'
             }
         }
 	  stage('build') {
             steps {
                 echo 'Testing..'
-		sh 'mvn package'
+		sh 'mvn package -DskipTests'
             }
      }
 	    stage('clean'){
