@@ -23,7 +23,7 @@ pipeline {
 	    stage('clean'){
 		    steps{
 			    echo ' clean war file'
-			    //sh 'mvn clean'
+			    sh 'mvn clean'
 		    }
 	    }
   }
