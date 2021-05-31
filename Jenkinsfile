@@ -9,7 +9,10 @@ pipeline {
      }
 	    stage('build_image'){
 		    steps{
+			    script{
+				   
 			    docker.build
+			    }
 		    }
 	    }
   }
