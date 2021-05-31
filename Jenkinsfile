@@ -1,7 +1,5 @@
 pipeline {
     agent any
-
-
     stages {
        	  stage('build') {
             steps {
@@ -11,7 +9,7 @@ pipeline {
      }
 	    stage('build_image'){
 		    steps{
-			    docker.build  testimage
+			    docker.build
 		    }
 	    }
   }
