@@ -1,4 +1,6 @@
 pipeline {
+	environment {
+    registry = "first image"
     agent any
     stages {
        	  stage('build') {
@@ -7,13 +9,12 @@ pipeline {
 		sh 'mvn install -Dmaven.test.skip=true'
             }
      }
-	    stage('build_image'){
-		    steps{
-			    script{
-				   
-			    docker.build
-			    }
-		    }
-	    }
+	 stage('Building image') {
+      steps{
+        script {
+          docker.build registry + ":$BUILD_NUMBER"
+        }
+      }
+    }
   }
 }
