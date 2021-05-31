@@ -22,8 +22,7 @@ pipeline {
      }
 	    stage('clean'){
 		    steps{
-			    echo ' clean war file'
-			    //sh 'mvn clean'
+			    docker.build 
 		    }
 	    }
   }
